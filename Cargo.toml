@@ -1,0 +1,13 @@
+[package]
+name = "rat-website"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+axum = "0.8.7"
+tokio = { version = "1", features = ["full"] }
+# If you only need the multi-thread runtime, you could also use:
+# tokio = { version = "1", features = ["rt-multi-thread"] }
+
+serde = { version = "1", features = ["derive"] }
+tera = "1.20.1"

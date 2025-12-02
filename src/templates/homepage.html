@@ -20,40 +20,76 @@
 
     <header class="hero">
         <div class="container">
-            <h1>{{ title }}</h1>
-            <p class="lead">{{ message }}</p>
-            <p class="muted">A small, focused tool to create and extract <code>.tar.gz</code> archives.</p>
+            <div class="hero-content">
+                <h1 class="title-main">{{ title }}</h1>
+                <p class="lead">{{ message }}</p>
+                <p class="hero-desc">The simplest way to compress and decompress tar.gz archives, without the complexity.</p>
+                <div class="hero-buttons">
+                    <a href="/install" class="btn btn-primary">Get Started</a>
+                    <a href="/about" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main class="container">
-        <section class="cards">
-            <article class="card">
-                <h3>Compress</h3>
-                <p>Quickly compress folders into <code>.tar.gz</code> archives.</p>
-            </article>
-            <article class="card">
-                <h3>Decompress</h3>
-                <p>Extract archives back into folder structures safely.</p>
-            </article>
-            <article class="card">
-                <h3>Simple CLI</h3>
-                <p>Clean, scriptable command-line interface for everyday use.</p>
-            </article>
+    <main>
+        <section class="features">
+            <div class="container">
+                <h2>Why RAT?</h2>
+                <div class="cards">
+                    <article class="card">
+                        <div class="card-icon">📦</div>
+                        <h3>Compress</h3>
+                        <p>Quickly compress folders into <code>.tar.gz</code> archives with a single command.</p>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon">📂</div>
+                        <h3>Decompress</h3>
+                        <p>Extract archives safely back into folder structures, maintaining the original layout.</p>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon">⚡</div>
+                        <h3>Simple CLI</h3>
+                        <p>Clean, scriptable command-line interface. No confusing flags.</p>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon">🗑️</div>
+                        <h3>Auto-cleanup</h3>
+                        <p>Optionally delete input files after compression or extraction.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>Ready to simplify your archives?</h2>
+                <p>Download RAT now and experience effortless compression.</p>
+                <a href="/install" class="btn btn-primary btn-lg">Download Now</a>
+            </div>
         </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 RAT — Rust Archive Tool</p>
+            <div class="footer-content">
+                <p style="margin:0;color:var(--muted);">Tegran Grigorian · <a href="/docs" style="color:var(--accent);text-decoration:none;">Documentation</a></p>
+                <div class="links">
+                    <a class="gh-link" href="https://github.com/TegranGrigorian" title="GitHub">
+                        <svg class="gh-icon" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.66 7.66 0 018 4.77c.68.003 1.36.092 2 .27 1.52-1.04 2.19-.82 2.19-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/tegran-grigorian/" title="LinkedIn">
+                        <svg class="gh-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.98h4V24h-4V8.98zM9.5 8.98h3.84v2.05h.05c.54-1.02 1.86-2.1 3.83-2.1 4.1 0 4.86 2.7 4.86 6.22V24h-4v-7.1c0-1.69-.03-3.87-2.36-3.87-2.36 0-2.72 1.84-2.72 3.75V24h-4V8.98z"/></svg>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://portfolio.tegrangrigorian.work/" title="Portfolio">
+                        <svg class="gh-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v2h3.59L8 14.59 9.41 16 19 6.41V10h2V3zM5 5h6v2H7v10h10v-4h2v6H5z"/></svg>
+                        <span>Portfolio</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
 </html>
-    <main>
-        <p>This is the main content of the homepage.</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 My Website</p>
-    </footer>
-</body>

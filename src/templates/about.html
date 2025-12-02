@@ -2,47 +2,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{ title }}</title>
-	<link rel="stylesheet" href="/static/styles.css">
-	<meta name="description" content="About RAT">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <meta name="description" content="About RAT - Rust Archive Tool">
 </head>
 <body>
-	<nav class="nav">
-		<div class="container">
-			<a class="brand" href="/">RAT</a>
-			<div class="links">
-				<a href="/">Home</a>
-				<a href="/about">About</a>
-				<a href="/install">Install</a>
-			</div>
-		</div>
-	</nav>
+    <nav class="nav">
+        <div class="container">
+            <a class="brand" href="/">RAT</a>
+            <div class="links">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/install">Install</a>
+            </div>
+        </div>
+    </nav>
 
-	<main class="container about">
-		<h1>{{ title }}</h1>
-		<p>{{ message }}</p>
+    <header class="hero hero-secondary">
+        <div class="container">
+            <h1>{{ title }}</h1>
+            <p class="lead">{{ message }}</p>
+        </div>
+    </header>
 
-		<h2>What is RAT?</h2>
-		<p>RAT (Rust Archive Tool) is a simple command-line utility to compress and
-		decompress files and folders using the <code>.tar.gz</code> format. It aims
-		to be small, fast, and script-friendly.</p>
+    <main class="container">
+        <section class="content-section">
+            <h2>What is RAT?</h2>
+            <p>RAT (Rust Archive Tool) is a straightforward command-line utility designed for compressing and decompressing files and folders using the <code>.tar.gz</code> format. Built with Rust, it prioritizes simplicity, speed, and scriptability—removing the confusion of traditional tar commands.</p>
 
-		<h2>Features</h2>
-		<ul>
-			<li>Compress folders to <code>.tar.gz</code></li>
-			<li>Extract archives safely</li>
-			<li>Optionally delete inputs after operation</li>
-			<li>Simple CLI usage and automation-friendly</li>
-		</ul>
-	</main>
+            <h2>Core Features</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>⚡ Compress</h3>
+                    <p>Turn entire folders into <code>.tar.gz</code> archives with a single, intuitive command.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>📂 Decompress</h3>
+                    <p>Extract archives safely while preserving the original folder structure and permissions.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🎯 Simple CLI</h3>
+                    <p>No cryptic flags. Just pass a file, folder, or archive—RAT does the rest.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🗑️ Auto-Delete</h3>
+                    <p>Optionally remove input files after successful compression or extraction.</p>
+                </div>
+            </div>
 
-	<footer class="site-footer">
-		<div class="container">
-			<p>&copy; 2025 RAT — Rust Archive Tool</p>
-		</div>
-	</footer>
+            <h2>Why Choose RAT?</h2>
+            <ul class="benefits-list">
+                <li><strong>No learning curve:</strong> Tar syntax is infamous. RAT keeps it simple.</li>
+                <li><strong>Written in Rust:</strong> Fast, safe, and memory-efficient.</li>
+                <li><strong>Automation-friendly:</strong> Perfect for scripts and CI/CD pipelines.</li>
+                <li><strong>Cross-platform:</strong> Works on Linux, macOS, and Windows.</li>
+            </ul>
+
+            <h2>Use Cases</h2>
+            <p class="placeholder">📝 <em>Placeholder: Add common use case examples here (backups, distribution, builds, etc.)</em></p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p style="margin:0;color:var(--muted);">Tegran Grigorian · <a href="/docs" style="color:var(--accent);text-decoration:none;">Documentation</a></p>
+                <div class="links">
+                    <a class="gh-link" href="https://github.com/TegranGrigorian" title="GitHub">
+                        <svg class="gh-icon" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.66 7.66 0 018 4.77c.68.003 1.36.092 2 .27 1.52-1.04 2.19-.82 2.19-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/tegran-grigorian/" title="LinkedIn">
+                        <svg class="gh-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.98h4V24h-4V8.98zM9.5 8.98h3.84v2.05h.05c.54-1.02 1.86-2.1 3.83-2.1 4.1 0 4.86 2.7 4.86 6.22V24h-4v-7.1c0-1.69-.03-3.87-2.36-3.87-2.36 0-2.72 1.84-2.72 3.75V24h-4V8.98z"/></svg>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://portfolio.tegrangrigorian.work/" title="Portfolio">
+                        <svg class="gh-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v2h3.59L8 14.59 9.41 16 19 6.41V10h2V3zM5 5h6v2H7v10h10v-4h2v6H5z"/></svg>
+                        <span>Portfolio</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
 

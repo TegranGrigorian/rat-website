@@ -1,13 +1,13 @@
 use axum::{
     response::Html,
+    extract::Extension,
 };
+use std::sync::Arc;
 use tera::{Context, Tera};
 
-
-pub async fn about() -> Html<String> {
-    let tera = Tera::new("src/templates/*.html").unwrap(); // look at tempaltes in src/templates
+pub async fn about(Extension(tera): Extension<Arc<Tera>>) -> Html<String> {
     let mut context = Context::new();
-    context.insert("title", "Rust Website");
-    context.insert("message", "Welcome to My Rust Website!");
-    Html(tera.render("about.html", &context).unwrap()) // grab out about.html
+    context.insert("title", "About RAT");
+    context.insert("message", "Learn more about the Rust Archive Tool.");
+    Html(tera.render("about.html", &context).unwrap())
 }

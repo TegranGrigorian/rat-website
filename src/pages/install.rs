@@ -1,13 +1,13 @@
 use axum::{
     response::Html,
+    extract::Extension,
 };
+use std::sync::Arc;
 use tera::{Context, Tera};
 
-
-pub async fn install() -> Html<String> {
-    let tera = Tera::new("src/templates/*.html").unwrap(); // look at tempaltes in src/templates
+pub async fn install(Extension(tera): Extension<Arc<Tera>>) -> Html<String> {
     let mut context = Context::new();
-    context.insert("title", "Rust Website");
-    context.insert("message", "Welcome to My Rust Website!");
-    Html(tera.render("install.html", &context).unwrap()) // grab out install.html
+    context.insert("title", "Install RAT");
+    context.insert("message", "Installation instructions and packages.");
+    Html(tera.render("install.html", &context).unwrap())
 }

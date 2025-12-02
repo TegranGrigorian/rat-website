@@ -25,7 +25,7 @@ async fn main() {
     // include screenshot files at compile time
     let ss_1_data = include_bytes!("../static/ss_1.png").to_vec();
     let ss_2_data = include_bytes!("../static/ss_2.jpg").to_vec();
-    let ss_3_data = include_bytes!("../static/ss_3.jpg").to_vec();
+    // let ss_3_data = include_bytes!("../static/ss_3.jpg").to_vec();
 
     // define the routes and attach the shared Tera instance as an Extension
     let app = Router::new()
@@ -60,13 +60,13 @@ async fn main() {
                 ss_2_data.clone(),
             )
         }))
-        .route("/static/ss_3.jpg", get(move || async move {
-            (
-                axum::http::StatusCode::OK,
-                [("content-type", "image/jpeg")],
-                ss_3_data.clone(),
-            )
-        }))
+        // .route("/static/ss_3.jpg", get(move || async move {
+        //     (
+        //         axum::http::StatusCode::OK,
+        //         [("content-type", "image/jpeg")],
+        //         ss_3_data.clone(),
+        //     )
+        // }))
         .layer(Extension(tera));
     
     let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap(); // bind to port 3000

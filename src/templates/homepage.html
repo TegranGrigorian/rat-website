@@ -3,13 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>{{ title | safe }}</title>
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to the Homepage</h1>
+    <nav class="nav">
+        <div class="container">
+            <a class="brand" href="/">RAT</a>
+            <div class="links">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/install">Install</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>{{ title }}</h1>
+            <p class="lead">{{ message }}</p>
+            <p class="muted">A small, focused tool to create and extract <code>.tar.gz</code> archives.</p>
+        </div>
     </header>
+
+    <main class="container">
+        <section class="cards">
+            <article class="card">
+                <h3>Compress</h3>
+                <p>Quickly compress folders into <code>.tar.gz</code> archives.</p>
+            </article>
+            <article class="card">
+                <h3>Decompress</h3>
+                <p>Extract archives back into folder structures safely.</p>
+            </article>
+            <article class="card">
+                <h3>Simple CLI</h3>
+                <p>Clean, scriptable command-line interface for everyday use.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 RAT — Rust Archive Tool</p>
+        </div>
+    </footer>
+</body>
+</html>
     <main>
         <p>This is the main content of the homepage.</p>
     </main>

@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ title }}</title>
+	<link rel="stylesheet" href="/static/styles.css">
+	<meta name="description" content="About RAT">
+</head>
+<body>
+	<nav class="nav">
+		<div class="container">
+			<a class="brand" href="/">RAT</a>
+			<div class="links">
+				<a href="/">Home</a>
+				<a href="/about">About</a>
+				<a href="/install">Install</a>
+			</div>
+		</div>
+	</nav>
+
+	<main class="container about">
+		<h1>{{ title }}</h1>
+		<p>{{ message }}</p>
+
+		<h2>What is RAT?</h2>
+		<p>RAT (Rust Archive Tool) is a simple command-line utility to compress and
+		decompress files and folders using the <code>.tar.gz</code> format. It aims
+		to be small, fast, and script-friendly.</p>
+
+		<h2>Features</h2>
+		<ul>
+			<li>Compress folders to <code>.tar.gz</code></li>
+			<li>Extract archives safely</li>
+			<li>Optionally delete inputs after operation</li>
+			<li>Simple CLI usage and automation-friendly</li>
+		</ul>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container">
+			<p>&copy; 2025 RAT — Rust Archive Tool</p>
+		</div>
+	</footer>
+</body>
+</html>
+
